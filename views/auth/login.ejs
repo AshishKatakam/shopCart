@@ -1,0 +1,24 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %>
+<div class="container space">
+    <div class="row">
+        <div class="col-md-6 lavish">
+          <%- include("../partials/flash") %>
+            <form method="POST" action="/login" class="needs-validation" novalidate>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="enter username" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="enter password" required>
+                </div>
+                <button type="submit" class="btn btn-primary nee">Login</button>
+                <br>
+            </form>
+            <p style="display: inline;">New User?</p><a style="text-decoration: none;" href="/signup">  SignUp</a>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") %> 
+

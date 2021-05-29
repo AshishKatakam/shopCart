@@ -1,0 +1,39 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %>
+<div class="container space">
+    <div class="row">
+        <div class="col-md-6 lavish">
+          <%- include("../partials/flash") %>
+            <form method="POST" action="/signup" class="needs-validation" novalidate>
+                <div class="row mb-3">
+                  <div class="col-6">
+                    <label for="firstname" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="firstname" required>
+                  </div>
+                  <div class="col-6">
+                    <label for="lastname" class="form-label">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname" required>
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input type="text" class="form-control" id="username" name="username" placeholder="enter username" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="enter email address" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="enter password" required>
+                </div>
+                <div class="mb-3">
+                  <label for="contactnumber" class="form-label">Contact No</label>
+                  <input type="text" class="form-control" id="contactnumber" name="contactnumber" placeholder="Contact Number" required>
+              </div>
+                <button type="submit" class="btn btn-primary">SignUp</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") %> 

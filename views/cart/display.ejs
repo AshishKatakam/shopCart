@@ -1,0 +1,54 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+
+<link rel="stylesheet" href="/css/star.css">
+<br>
+<div class="container space">
+  <%- include("../partials/flash") %> 
+  <h5 class="display-6">Cart</h5>
+  <div class="row">
+      <div class="col-lg-8 col-md-12">
+        <% for (let item of cart){%>
+            <div class="card mb-3" style="max-width: 600px;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <img src="<%=item.img%> " width="200" height="200" alt="...">
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title"><%= item.name %></h5>
+                      <p class="card-text">&#8377;<%=item.price%></p>
+                      <br>
+                      <form method="POST" action="/user/<%=currentUser._id%>/cart/<%=item._id%>?_method=DELETE">
+                        <button class="btn btn-sm btn-danger">Remove</button>
+                    </form>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          <%}%>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <%totalAmount=0%> 
+        <h5 class="display-6">Price Details</h5>
+        <ul class="list-group">
+          <% for(let item of cart){%>
+            <%totalAmount+=item.price%> 
+            <li class="list-group-item"><%=item.name%>-&#8377;<%=item.price%></li>
+          <%}%> 
+        </ul>
+        <b> Total Amount : &#8377;<%= totalAmount %></b>
+        <%currentUser.price=totalAmount %>
+
+        <div class="mt-2">
+          <form action="/user/payment" method="GET">
+            <button class="btn btn-success">Proceed to Pay</button>
+          </form>
+        </div>
+      </div>
+  </div>
+   
+</div>
+<%- include("../partials/footer") %> 
+

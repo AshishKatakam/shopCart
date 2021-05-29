@@ -1,0 +1,28 @@
+<%- include("../partials/header") %> 
+<%- include("../partials/navbar") %> 
+<div class="container space">
+    <div class="row">
+        <div class="col-md-6 lavish">
+            <form method="POST" action="/products" class="needs-validation" novalidate>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="product name" required>
+                <div class="mb-3">
+                  <label for="img" class="form-label">img URL</label>
+                  <input type="text" class="form-control" id="img" name="img" placeholder="enter image URL" required>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price in $</label>
+                    <input type="number" class="form-control" id="price" name="price" placeholder="enter price" required>
+                </div>
+                <div class="mb-3">
+                    <label for="desc" class="form-label">Description</label>
+                    <br>
+                    <textarea  class="form-control" name="desc" id="desc" cols="30" rows="10" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+<%- include("../partials/footer") %> 
