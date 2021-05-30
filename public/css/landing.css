@@ -4,7 +4,7 @@
 }
 body{
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3w5NDA5MzY2fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
+    background-image: url("https://images.unsplash.com/photo-1476820865390-c52aeebb9891?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3w5NDA5MzY2fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,29 +17,31 @@ body{
 span{
     display: inline-block;
     color: whitesmoke;
-    font-size: 50px;
+    font-size: 4vw;
     /* position:absolute; */
     margin-top: 32vh;
-    margin-left: 32vw;
-    font-weight: 900;
+    margin-left: 30vw;
+    font-weight: 800;
 }
 h2{
     opacity: 0.9;
     background-color: #ff6d50;
     color:white;
     font-family: 'Monoton',cursive;
+    width: 100vw;
 }
 h4{
     color: #bbdef0;
     margin-top: 10px;
     margin-left: 28vw;
+    font-size: 1.8vw;
 }
 button{
-    width: 150px;
+    width: 12vw;
     margin-left: 43vw;
     margin-top: 20px;
-    padding: 5px;
-    font-size: 18px;
+    padding: 0.5vw;
+    font-size: 1.3vw;
     border-radius: 6%;
     background-color: #ff6d50;
     color: white;
