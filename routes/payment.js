@@ -4,7 +4,6 @@ const user=require('../models/user');
 const jsSHA=require('jssha');
 const uniqid=require('uniqid');
 const { isLoggedIn } = require('../middleware');
-const isLoggedIn=require('../middleware');
 const request=require('request');
 
 

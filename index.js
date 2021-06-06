@@ -6,13 +6,15 @@ const express=require('express');
 const app=express();
 const mongoose=require('mongoose');
 const path=require('path');
-const seedDB=require('./seed');//this is not a package
+const seedDB=require('./seed');
 const methodOverride = require('method-override');
 const session=require('express-session');
 const flash=require('connect-flash');
 const passport = require('passport');
 const localStrategy=require('passport-local');
 const User=require('./models/user');
+// const favicon=require('serve-favicon');
+
 
 //routes
 const productRoutes=require('./routes/product');
@@ -75,6 +77,8 @@ app.use(function (req, res, next) {
 app.use(productRoutes);
 app.use(authRoutes);
 app.use(cartRoutes);
+
+// app.use(favicon(path.join(__dirname,'public','favicon.ico')));
 
 app.get('/',(req,res)=>{
     res.render('landing');

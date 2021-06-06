@@ -5,6 +5,19 @@ const Review = require('../models/review');
 const {isLoggedIn}=require('../middleware');
 
 
+//homepage
+router.get('/home',async(req,res)=>{
+    try{
+        const products=await Product.find({});
+        res.render('products/home',{products});
+    }catch(e){
+        console.log(e.message);
+        req.flash('error','unable to load homepage');
+        res.redirect('/error');
+    }
+})
+
+
 //display all the products
 router.get('/products',async(req,res)=>{
     try{
